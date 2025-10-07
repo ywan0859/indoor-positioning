@@ -31,33 +31,27 @@
 
   <main>
     <!-- Section 1：概览（左文） + Dashboard（右） -->
-    <section class="section">
-      <div class="container grid">
-        <article class="card">
-          <span class="badge">Introduction</span>
-          <h2>Overview</h2>
-          <p><b>Indoor Positioning Platform</b> is a Wi-Fi / UWB based indoor localization system for smart environments.
-          It collects RSSI and channel information from multiple access points and estimates positions on a live dashboard.</p>
-          <p>Data are uploaded via MQTT to a cloud database (AliCloud / AWS). A web dashboard visualizes trajectory,
-          heatmap and accuracy metrics for experiments and demos.</p>
-          <div class="kv">
-            <span>Wi-Fi</span><span>UWB</span><span>BLE</span><span>MQTT</span>
-            <span>Fingerprinting</span><span>Kalman</span><span>AliCloud</span><span>AWS</span>
-          </div>
-        </article>
+    <section class="intro-section">
+     <div class="intro-container">
+       <div class="intro-text">
+         <h2>A Wearable ECG Monitor for Deep Learning Based Real-Time Cardiovascular Disease Detection</h2>
+         <p>
+           Cardiovascular disease has become one of the most significant threats to human health.
+           The early prevention and treatment make a difference between life and death.
+           In the 21st century, mobile ECG monitoring technologies have made great progress.
+        </p>
+        <p>
+          Hence, remote ECG monitoring using wearable patches is becoming mainstream.
+          These devices offer long-term, multi-channel tracking with minimal discomfort.
+        </p>
+     </div>
+     <div class="intro-media">
+       <img src=" system structure.png" alt="ECG Monitor" />
+      <!-- 或者是视频：<video controls src="assets/ecg-video.mp4"></video> -->
+    </div>
+   </div>
+  </section>
 
-        <aside class="card">
-          <h2 style="margin-top:0">Dashboard</h2>
-          <div class="iframe-wrap">
-            <!-- TODO: 把下面的链接换成你的 DataV 公开分享链接 -->
-            <iframe src="https://datav.aliyun.com/share/REPLACE-WITH-YOUR-DATAV-LINK" loading="lazy" allowfullscreen></iframe>
-          </div>
-          <p style="color:#6b7280;font-size:14px;margin-top:10px">
-            If the dashboard doesn't show, make sure the share link is public and allows embedding.
-          </p>
-        </aside>
-      </div>
-    </section>
 
     <!-- Section 2：ECG Signal（左文右图） -->
     <!-- ================= ECG Signal Section ================= -->
