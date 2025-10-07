@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Hospital Platform</title>
+  <meta name="description" content="A simple, elegant landing page for the Smart Hospital Platform with an intro and an embedded dashboard." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Smart Hospital Platform</h1>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container grid">
+        <article class="card">
+          <span class="badge">Introduction</span>
+          <h2>Overview</h2>
+          <p><b>Smart Hospital Platform</b> implements a complete IoT system that can be deployed in hospital scenarios. On the device side, data can be uploaded via Wi‑Fi, LoRa, UWB, or BLE, with gateways and edge nodes connected through the MQTT protocol.</p>
+          <p>Data are stored in cloud databases (e.g., AliCloud/AWS) and visualized through the web/mobile dashboards. You can replace the dashboard on the right with your own <i>Aliyun DataV</i> share link or any external web app.</p>
+          <div class="kv">
+            <span>Wi‑Fi</span><span>LoRa</span><span>UWB</span><span>BLE</span><span>MQTT</span><span>AliCloud</span><span>AWS</span>
+          </div>
+        </article>
+        <aside class="card">
+          <h2 style="margin-top:0">Dashboard</h2>
+          <div class="iframe-wrap">
+            <!-- Replace the src with your real dashboard share link -->
+            <iframe src="https://datav.aliyun.com/share/REPLACE-WITH-YOUR-DATAV-LINK" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <p style="color:#94a3b8;font-size:14px;margin-top:10px">If the dashboard doesn't show, make sure the link is public and accessible.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2>How to customize</h2>
+          <ol>
+            <li>Replace <code>assets/hero.jpg</code> with your own banner image (same file name).</li>
+            <li>Edit texts in <code>index.html</code>.</li>
+            <li>Replace the <code>iframe</code> src with your Aliyun DataV (or other) dashboard share URL.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    © <span id="year"></span> Smart Hospital Platform. Built for Sydney IoT demos.
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
