@@ -46,41 +46,39 @@
      <div class="intro-media">
        <img src="assets/system-structure.png" alt="The overall system structure of the navigation application" />
       <!-- 或者是视频：<video controls src="assets/ecg-video.mp4"></video> -->
+        <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
+            Figure: The overall system structure of the navigation application
+          </p>
     </div>
    </div>
   </section>
 
 
-    <!-- Section 2：ECG Signal（左文右图） -->
-    <!-- ================= ECG Signal Section ================= -->
-    <section class="section" id="ecg-section">
+    <!-- Section 2：WiFi Fingerprint（左文右图） -->
+    <section class="section" id="WiFi Fingerprint-section">
       <div class="container flex">
         <!-- 左侧文字内容 -->
         <div class="text-block">
-          <h2>ECG Signal</h2>
+          <h2>WiFi Fingerprint</h2>
           <p>
-            Electrocardiogram (ECG) is an essential indicator of the occurrence, transmission, and recovery of
-            cardiac excitation. It provides important reference information for evaluating heart rate, rhythm,
-            and cardiac function.
+            Electrocardiogram (ECG) is an essential indicator of the occurrence, transmission, and recovery of cardiac excitation. 
+            It provides important reference information for evaluating heart rate, rhythm,and cardiac function.
+            Wi-Fi fingerprinting is a core technique for achieving indoor positioning using existing wireless network infrastructure.
+            It collects Wi-Fi signal strength (RSSI) features from different locations to build a “fingerprint database.”
+            When a user enters the environment, the system compares the current signal features with the stored fingerprints to accurately determine the user’s position.
           </p>
           <p>
-            The three main components are:
-            <b>P wave</b> (atrial depolarization),
-            <b>QRS complex</b> (ventricular depolarization), and
-            <b>T wave</b> (ventricular repolarization). These signals together reflect the electrical activity of the heart.
+            In this project, we integrate deep learning algorithms (CNN – Convolutional Neural Networks) to extract spatial features and recognize signal patterns from Wi-Fi data, significantly improving positioning accuracy and robustness. 
+            Combined with real-time data updates and API communication, the system achieves sub-meter-level accuracy, providing a reliable spatial foundation for the AR navigation platform.         
           </p>
-          <p>
-            The ECG system captures and analyzes these signals in real time, enabling early detection of abnormalities
-            such as arrhythmia, conduction block, or myocardial hypertrophy.
-          </p>
-        </div>
+          </div>
 
         <!-- 右侧图片内容 -->
         <div class="image-block">
-          <!-- ⚠️ 请把 ECG 图片放到 assets/ecg.png；或改 src 为你的图片路径 -->
-          <img src="assets/ecg.png" alt="ECG waveform diagram showing P, QRS, and T waves" />
+          <!-- ⚠️ 请把图片放到 assets/map.png；或改 src 为你的图片路径 -->
+          <img src="assets/map.png" alt=" Hospital Second floor’s Navmesh map example" />
           <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
-            Figure: Typical ECG waveform showing P, QRS, and T waves
+            Figure: Hospital Second floor’s Navmesh map example
           </p>
         </div>
       </div>
