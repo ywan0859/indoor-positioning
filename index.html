@@ -57,35 +57,34 @@
   </section>
 
 
-    <!-- Section 2：WiFi Fingerprint（左文右图） -->
-    <section class="section" id="WiFi-Fingerprint">
-      <div class="container flex">
-        <!-- 左侧文字内容 -->
-        <div class="text-block">
-          <h2>WiFi Fingerprint</h2>
-          <p>
-            Wi-Fi fingerprinting is a core technique for achieving indoor positioning using existing wireless network infrastructure.
-            It collects Wi-Fi signal strength (RSSI) features from different locations to build a “fingerprint database.”
-            When a user enters the environment, the system compares the current signal features with the stored fingerprints to accurately determine the user’s position.
-          </p>
-          <p>
-            In this project, we integrate deep learning algorithms (CNN – Convolutional Neural Networks) to extract spatial features and recognize signal patterns from Wi-Fi data, significantly improving positioning accuracy and robustness. 
-            Combined with real-time data updates and API communication, the system achieves sub-meter-level accuracy, providing a reliable spatial foundation for the AR navigation platform.         
-          </p>
-          </div>
+  <!-- Section 2：WiFi Fingerprint（左图右文） -->
+<section class="section" id="WiFi-Fingerprint">
+  <div class="container flex">
+   <!-- ✅ 左侧图片内容 -->
+    <div class="image-block">
+      <img src="assets/map.png" alt="Hospital Second floor’s Navmesh map example" />
+      <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
+        Figure: Hospital Second floor’s Navmesh map example
+      </p>
+    </div>
+    
+    <!-- ✅ 右侧文字内容 -->
+    <div class="text-block">
+      <h2>WiFi Fingerprint</h2>
+      <p>
+        Wi-Fi fingerprinting is a core technique for achieving indoor positioning using existing wireless network infrastructure.
+        It collects Wi-Fi signal strength (RSSI) features from different locations to build a “fingerprint database.”
+        When a user enters the environment, the system compares the current signal features with the stored fingerprints to accurately determine the user’s position.
+      </p>
+      <p>
+        In this project, we integrate deep learning algorithms (CNN – Convolutional Neural Networks) to extract spatial features and recognize signal patterns from Wi-Fi data, significantly improving positioning accuracy and robustness. 
+        Combined with real-time data updates and API communication, the system achieves sub-meter-level accuracy, providing a reliable spatial foundation for the AR navigation platform.         
+      </p>
+    </div>
+    </div>
+</section>
+<!-- ================= End wifi Section ================= -->
 
-        <!-- 右侧图片内容 -->
-        <div class="image-block">
-          <!-- ⚠️ 请把图片放到 assets/map.png；或改 src 为你的图片路径 -->
-          <img src="assets/map.png" alt="Hospital Second floor’s Navmesh map example" />
-
-          <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
-            Figure: Hospital Second floor’s Navmesh map example
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- ================= End wifi Section ================= -->
 
   </main>
 
