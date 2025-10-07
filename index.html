@@ -3,51 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Smart Hospital Platform</title>
-  <meta name="description" content="A simple, elegant landing page for the Smart Hospital Platform with an intro and an embedded dashboard." />
+
+  <!-- ✅ 可改：浏览器标签标题 -->
+  <title>Indoor Positioning Platform</title>
+
+  <!-- ✅ 可改：搜索/分享用的一句话描述 -->
+  <meta name="description"
+        content="A web dashboard and IoT demo for indoor localization using Wi-Fi, AR, and indoor positioning technieque." />
+
+  <!-- 样式文件路径，保持不变（除非你改了文件名/位置） -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- 顶部横幅背景图来自 assets/hero.jpg，如需更换，请用同名文件覆盖 -->
   <header class="hero">
-    <h1>Smart Hospital Platform</h1>
+    <!-- ✅ 可改：页面主标题（大字） -->
+    <h1>Indoor Positioning Platform</h1>
   </header>
 
   <main>
+    <!-- Section 1：左文右图（仪表板） -->
     <section class="section">
       <div class="container grid">
+        <!-- 左侧卡片：文字介绍 -->
         <article class="card">
-          <span class="badge">Introduction</span>
+          <span class="badge">Introduction</span> <!-- ✅ 可改：小徽标字样 -->
+
+          <!-- ✅ 可改：小标题 -->
           <h2>Overview</h2>
-          <p><b>Smart Hospital Platform</b> implements a complete IoT system that can be deployed in hospital scenarios. On the device side, data can be uploaded via Wi‑Fi, LoRa, UWB, or BLE, with gateways and edge nodes connected through the MQTT protocol.</p>
-          <p>Data are stored in cloud databases (e.g., AliCloud/AWS) and visualized through the web/mobile dashboards. You can replace the dashboard on the right with your own <i>Aliyun DataV</i> share link or any external web app.</p>
+
+          <!-- ✅ 可改：第一段正文（建议 1~3 句） -->
+          <p><b>Indoor Positioning Platform</b> is a Wi-Fi / UWB based indoor localization system for smart environments.
+          It collects RSSI and channel information from multiple access points and estimates positions on a live dashboard.</p>
+
+          <!-- ✅ 可改：第二段正文（描述数据流/云端/可视化等） -->
+          <p>Data are uploaded via MQTT to a cloud database (AliCloud / AWS). A web dashboard visualizes trajectory, heatmap and accuracy metrics for experiments and demos.</p>
+
+          <!-- ✅ 可改：关键词徽签（可增删） -->
           <div class="kv">
-            <span>Wi‑Fi</span><span>LoRa</span><span>UWB</span><span>BLE</span><span>MQTT</span><span>AliCloud</span><span>AWS</span>
+            <span>Wi-Fi</span><span>UWB</span><span>BLE</span><span>MQTT</span>
+            <span>Fingerprinting</span><span>Kalman</span><span>AliCloud</span><span>AWS</span>
           </div>
         </article>
+
+        <!-- 右侧卡片：嵌入外部仪表板/网页 -->
         <aside class="card">
+          <!-- ✅ 可改：卡片标题 -->
           <h2 style="margin-top:0">Dashboard</h2>
+
           <div class="iframe-wrap">
-            <!-- Replace the src with your real dashboard share link -->
-            <iframe src="https://datav.aliyun.com/share/REPLACE-WITH-YOUR-DATAV-LINK" loading="lazy" allowfullscreen></iframe>
+            <!-- ✅ 重要可改：把 src 换成你的阿里云 DataV 或任意可公开访问的链接 -->
+            <iframe
+              src="https://datav.aliyun.com/share/REPLACE-WITH-YOUR-DATAV-LINK"
+              loading="lazy"
+              allowfullscreen></iframe>
           </div>
-          <p style="color:#94a3b8;font-size:14px;margin-top:10px">If the dashboard doesn't show, make sure the link is public and accessible.</p>
+
+          <!-- ✅ 可改：说明文字；若 iframe 不显示，多半是分享未公开或被 CSP 限制 -->
+          <p style="color:#94a3b8;font-size:14px;margin-top:10px">
+            If the dashboard doesn't show, make sure the share link is public and allows embedding.
+          </p>
         </aside>
       </div>
     </section>
 
+    <!-- Section 2：使用说明/自定义说明 -->
     <section class="section">
       <div class="container">
         <div class="card">
-          <h2>How to customize</h2>
+          <!-- ✅ 可改：小标题 -->
+          <h2>How to Customize</h2>
+
+          <!-- ✅ 可改：步骤说明 -->
           <ol>
-            <li>Replace <code>assets/hero.jpg</code> with your own banner image (same file name).</li>
-            <li>Edit texts in <code>index.html</code>.</li>
-            <li>Replace the <code>iframe</code> src with your Aliyun DataV (or other) dashboard share URL.</li>
+            <li>Replace <code>assets/hero.jpg</code> with your own banner (keep the same filename).</li>
+            <li>Edit texts in this file (<code>index.html</code>) to describe your project.</li>
+            <li>Replace the <code>iframe</code> <code>src</code> with your Aliyun DataV / other dashboard share URL.</li>
           </ol>
         </div>
       </div>
     </section>
+
+    <!-- Section 3：可选的附加模块（你也可以删掉这一整块） -->
+    <section class="section">
+      <div class="container grid">
+        <article class="card">
+          <!-- ✅ 可改：小标题 -->
+          <h2>Experiment Notes</h2>
+          <!-- ✅ 可改：内容 -->
+          <p>Testbed: 4 Wi-Fi APs @ 2.4 GHz, sampling RSSI per 100 ms. Data are cleaned and synchronized before
+          fingerprinting. We evaluate average error (m), 90-percentile (m) and latency (ms).</p>
+        </article>
+        <article class="card">
+          <!-- ✅ 可改：小标题 -->
+          <h2>Links & Downloads</h2>
+          <!-- ✅ 可改：替换为你的仓库/论文/数据集链接 -->
+          <ul>
+            <li><a href="https://github.com/ywan0859/indoor-positioning" target="_blank">Project Repository</a></li>
+            <li><a href="#" target="_blank">Dataset (CSV)</a></li>
+            <li><a href="#" target="_blank">Paper / Report (PDF)</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <!-- 页脚年份自动更新；文字可改 -->
+  <footer class="footer container">
+    <!-- ✅ 可改：版权/署名 -->
+    © <span id="year"></span> Indoor Positioning Platform · Built for Sydney IoT demos.
+  </footer>
+
+  <!-- 不用改：只是自动填充年份 -->
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
 
   <footer class="footer container">
     © <span id="year"></span> Smart Hospital Platform. Built for Sydney IoT demos.
