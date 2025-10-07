@@ -2,129 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- ✅ 可改：浏览器标签标题 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- 手机端自适应大小 -->
   <title>Indoor Positioning Platform</title>
-
-  <!-- ✅ 可改：搜索/分享用的一句话描述 -->
-  <meta name="description"
-        content="A web dashboard and IoT demo for indoor localization using Wi-Fi, AR, and indoor positioning technieque." />
-
-  <!-- 样式文件路径，保持不变（除非你改了文件名/位置） -->
+  <meta name="description" content="A web dashboard and IoT demo for indoor localization using Wi-Fi, UWB, and BLE sensors." />
   <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    /* 让标题更细，白底风格更统一（在你现有 style.css 基础上的小补丁） */
+    .hero{position:relative;height:28vh;min-height:220px;background:#ffffff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(0,0,0,.08)}
+    .hero h1{margin:0;font-size:clamp(36px,6vw,84px);letter-spacing:.02em;text-align:center;color:#333;font-weight:400;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+    .section{background:#ffffff}
+    .card{background:#ffffff;border:1px solid rgba(0,0,0,.05);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+    /* 左文右图布局 */
+    .flex{display:flex;align-items:center;justify-content:space-between;gap:40px}
+    .text-block{flex:1;font-size:16px;color:#333;line-height:1.8}
+    .image-block{flex:1;text-align:center}
+    .image-block img{width:100%;max-width:520px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+    @media (max-width:900px){.flex{flex-direction:column}.hero{height:22vh}}
+  </style>
+  
 </head>
 <body>
 
-  <!-- 顶部横幅背景图来自 assets/hero.jpg，如需更换，请用同名文件覆盖 -->
+  <!-- 顶部标题（白底、细字体） -->
   <header class="hero">
-    <!-- ✅ 可改：页面主标题（大字） -->
     <h1>Indoor Positioning Platform</h1>
   </header>
 
   <main>
-    <!-- Section 1：左文右图（仪表板） -->
+    <!-- Section 1：概览（左文） + Dashboard（右） -->
     <section class="section">
       <div class="container grid">
-        <!-- 左侧卡片：文字介绍 -->
         <article class="card">
-          <span class="badge">Introduction</span> <!-- ✅ 可改：小徽标字样 -->
-
-          <!-- ✅ 可改：小标题 -->
+          <span class="badge">Introduction</span>
           <h2>Overview</h2>
-
-          <!-- ✅ 可改：第一段正文（建议 1~3 句） -->
           <p><b>Indoor Positioning Platform</b> is a Wi-Fi / UWB based indoor localization system for smart environments.
           It collects RSSI and channel information from multiple access points and estimates positions on a live dashboard.</p>
-
-          <!-- ✅ 可改：第二段正文（描述数据流/云端/可视化等） -->
-          <p>Data are uploaded via MQTT to a cloud database (AliCloud / AWS). A web dashboard visualizes trajectory, heatmap and accuracy metrics for experiments and demos.</p>
-
-          <!-- ✅ 可改：关键词徽签（可增删） -->
+          <p>Data are uploaded via MQTT to a cloud database (AliCloud / AWS). A web dashboard visualizes trajectory,
+          heatmap and accuracy metrics for experiments and demos.</p>
           <div class="kv">
             <span>Wi-Fi</span><span>UWB</span><span>BLE</span><span>MQTT</span>
             <span>Fingerprinting</span><span>Kalman</span><span>AliCloud</span><span>AWS</span>
           </div>
         </article>
 
-        <!-- 右侧卡片：嵌入外部仪表板/网页 -->
         <aside class="card">
-          <!-- ✅ 可改：卡片标题 -->
           <h2 style="margin-top:0">Dashboard</h2>
-
           <div class="iframe-wrap">
-            <!-- ✅ 重要可改：把 src 换成你的阿里云 DataV 或任意可公开访问的链接 -->
-            <iframe
-              src="https://datav.aliyun.com/share/REPLACE-WITH-YOUR-DATAV-LINK"
-              loading="lazy"
-              allowfullscreen></iframe>
+            <!-- TODO: 把下面的链接换成你的 DataV 公开分享链接 -->
+            <iframe src="https://datav.aliyun.com/share/REPLACE-WITH-YOUR-DATAV-LINK" loading="lazy" allowfullscreen></iframe>
           </div>
-
-          <!-- ✅ 可改：说明文字；若 iframe 不显示，多半是分享未公开或被 CSP 限制 -->
-          <p style="color:#94a3b8;font-size:14px;margin-top:10px">
+          <p style="color:#6b7280;font-size:14px;margin-top:10px">
             If the dashboard doesn't show, make sure the share link is public and allows embedding.
           </p>
         </aside>
       </div>
     </section>
 
-    <!-- Section 2：使用说明/自定义说明 -->
-    <section class="section">
-      <div class="container">
-        <div class="card">
-          <!-- ✅ 可改：小标题 -->
-          <h2>How to Customize</h2>
+    <!-- Section 2：ECG Signal（左文右图） -->
+    <!-- ================= ECG Signal Section ================= -->
+    <section class="section" id="ecg-section">
+      <div class="container flex">
+        <!-- 左侧文字内容 -->
+        <div class="text-block">
+          <h2>ECG Signal</h2>
+          <p>
+            Electrocardiogram (ECG) is an essential indicator of the occurrence, transmission, and recovery of
+            cardiac excitation. It provides important reference information for evaluating heart rate, rhythm,
+            and cardiac function.
+          </p>
+          <p>
+            The three main components are:
+            <b>P wave</b> (atrial depolarization),
+            <b>QRS complex</b> (ventricular depolarization), and
+            <b>T wave</b> (ventricular repolarization). These signals together reflect the electrical activity of the heart.
+          </p>
+          <p>
+            The ECG system captures and analyzes these signals in real time, enabling early detection of abnormalities
+            such as arrhythmia, conduction block, or myocardial hypertrophy.
+          </p>
+        </div>
 
-          <!-- ✅ 可改：步骤说明 -->
-          <ol>
-            <li>Replace <code>assets/hero.jpg</code> with your own banner (keep the same filename).</li>
-            <li>Edit texts in this file (<code>index.html</code>) to describe your project.</li>
-            <li>Replace the <code>iframe</code> <code>src</code> with your Aliyun DataV / other dashboard share URL.</li>
-          </ol>
+        <!-- 右侧图片内容 -->
+        <div class="image-block">
+          <!-- ⚠️ 请把 ECG 图片放到 assets/ecg.png；或改 src 为你的图片路径 -->
+          <img src="assets/ecg.png" alt="ECG waveform diagram showing P, QRS, and T waves" />
+          <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
+            Figure: Typical ECG waveform showing P, QRS, and T waves
+          </p>
         </div>
       </div>
     </section>
+    <!-- ================= End ECG Section ================= -->
 
-    <!-- Section 3：可选的附加模块（你也可以删掉这一整块） -->
-    <section class="section">
-      <div class="container grid">
-        <article class="card">
-          <!-- ✅ 可改：小标题 -->
-          <h2>Experiment Notes</h2>
-          <!-- ✅ 可改：内容 -->
-          <p>Testbed: 4 Wi-Fi APs @ 2.4 GHz, sampling RSSI per 100 ms. Data are cleaned and synchronized before
-          fingerprinting. We evaluate average error (m), 90-percentile (m) and latency (ms).</p>
-        </article>
-        <article class="card">
-          <!-- ✅ 可改：小标题 -->
-          <h2>Links & Downloads</h2>
-          <!-- ✅ 可改：替换为你的仓库/论文/数据集链接 -->
-          <ul>
-            <li><a href="https://github.com/ywan0859/indoor-positioning" target="_blank">Project Repository</a></li>
-            <li><a href="#" target="_blank">Dataset (CSV)</a></li>
-            <li><a href="#" target="_blank">Paper / Report (PDF)</a></li>
-          </ul>
-        </article>
-      </div>
-    </section>
   </main>
 
-  <!-- 页脚年份自动更新；文字可改 -->
   <footer class="footer container">
-    <!-- ✅ 可改：版权/署名 -->
     © <span id="year"></span> Indoor Positioning Platform · Built for Sydney IoT demos.
   </footer>
-
-  <!-- 不用改：只是自动填充年份 -->
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
-
-
-  <footer class="footer container">
-    © <span id="year"></span> Smart Hospital Platform. Built for Sydney IoT demos.
-  </footer>
-
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
