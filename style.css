@@ -22,29 +22,25 @@ a:hover{text-decoration:underline}
   position: relative;
   height: 48vh;
   min-height: 320px;
-  background: url('assets/hero.png') center/cover no-repeat;
+  background: url('assets/hero-bg.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 0;
 }
-
-
 .hero::after {
-  background: rgba(255, 0, 0, 0.5);
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);  /* 可选遮罩 */
+  z-index: 0;
 }
-
-
 .hero h1 {
   position: relative;
-  margin: 0;
-  font-size: clamp(36px, 6vw, 84px);
-  letter-spacing: .02em;
-  text-align: center;
-  color: #ffffff;  /* ✅ 白色文字，适配深背景 */
-  font-weight: 300;
+  color: #fff;
   z-index: 1;
 }
+
 
 
 .section{
