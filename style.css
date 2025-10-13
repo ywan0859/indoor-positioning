@@ -29,13 +29,11 @@ a:hover{text-decoration:underline}
   z-index: 0;
 }
 
+
 .hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);  /* ✅ 添加半透明黑色遮罩 */
-  z-index: 0;
+  background: rgba(255, 0, 0, 0.5);
 }
+
 
 .hero h1 {
   position: relative;
