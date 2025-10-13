@@ -137,3 +137,19 @@ a:hover{text-decoration:underline}
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
+.gray-banner {
+  background-color: #f3f4f6; /* 灰色背景 (tailwind slate-100) */
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gray-banner h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
