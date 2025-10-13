@@ -70,7 +70,7 @@ a:hover{text-decoration:underline}
   background-color: #f2f3f5; /* 淡灰色背景 */
   padding: 40px 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
@@ -78,6 +78,7 @@ a:hover{text-decoration:underline}
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
+  line-height: 1.6;
 }
 
 .gray-banner h2 {
