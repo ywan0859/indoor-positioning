@@ -22,7 +22,8 @@ a:hover{text-decoration:underline}
   position: relative;
   height: 48vh;
   min-height: 320px;
-  background: url('assets/hero-bg.jpg?v=6') center/cover no-repeat;
+  background: url('./assets/hero-bg.jpg?v=6') center/cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
