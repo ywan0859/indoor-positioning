@@ -51,9 +51,6 @@ a:hover{text-decoration:underline}
   z-index: 1;
 }
 
-
-
-
 .section{
   background:#ffffff;
   padding:48px 0;
@@ -71,7 +68,7 @@ a:hover{text-decoration:underline}
 
 .gray-banner {
   background-color: #f2f3f5; /* 淡灰色背景 */
-  padding: 45px 0;
+  padding: 40px 0;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #ddd;
