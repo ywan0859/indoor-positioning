@@ -54,17 +54,23 @@ a:hover{text-decoration:underline}
 }
 
 .gray-banner {
-  background-color: #f3f4f6;  /* 淡灰色背景 */
-  padding: 24px;
-  text-align: center;
+  background-color: #f3f4f6; /* 淡灰色背景 */
+  padding: 24px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gray-banner .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .gray-banner h2 {
   margin: 0;
   font-size: 24px;
   font-weight: 400;
-  color: #333;
+  color: #374151; /* slate-700，与 ECG 页面更接近 */
+  text-align: left;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
