@@ -70,8 +70,8 @@ a:hover{text-decoration:underline}
 }
 
 .gray-banner {
-  background-color: #f3f4f6; /* 淡灰色背景 */
-  padding: 80px 0;
+  background-color: #f2f3f5; /* 淡灰色背景 */
+  padding: 60px 0;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #ddd;
@@ -85,7 +85,7 @@ a:hover{text-decoration:underline}
 
 .gray-banner h2 {
   margin: 0;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 300;
   color: #333;
   margin: 0;
