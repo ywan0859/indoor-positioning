@@ -21,8 +21,8 @@ a:hover{text-decoration:underline}
 
   .hero {
     position: relative;
-    height: 20vh;
-    min-height: 220px;
+    height: 40vh;
+    min-height: 280px;
     background-image: url("assets/hero-bg.jpg"); /* 加载背景图 */
     background-size: cover;        /* 图片自适应填满背景 */
     background-position: center;   /* 居中显示 */
