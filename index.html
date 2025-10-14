@@ -81,6 +81,48 @@
     </div>
     </div>
 </section>
+
+    <!-- ================= Section 3: Real-time AR Navigation ================= -->
+<section class="intro-section" id="ar-navigation">
+  <div class="intro-container">
+    
+    <!-- ✅ 左侧文字内容 -->
+    <div class="intro-text">
+      <h2>Real-time AR Navigation</h2>
+     <p>
+      After accurately determining the user's position using WiFi fingerprinting and CNN models, our system transmits the location information to a Unity-based Augmented Reality (AR) mobile application via Django RESTful API.
+      This application acts as a smart navigation interface, displaying virtual guides directly over the real-world environment.
+     </p>
+
+     <p>
+      In the hospital scenario, the AR app overlays real-time navigation paths on the camera view of the user's smartphone. 
+      Using Unity’s NavMesh and anchor system, it dynamically calculates the shortest path between the user’s current position and the desired destination such as a consultation room, pharmacy, or emergency area.
+      Virtual arrows, lines, and labels are displayed on screen to guide the user intuitively through the complex indoor layout.
+     </p>
+
+     <p>
+      Moreover, the system supports dynamic path updates based on the user’s movement. If the user deviates from the route, the navigation will automatically recalculate and provide a new path in real time.
+      This enhances both efficiency and user experience, especially for first-time visitors, elderly patients, or emergency staff who require fast and reliable indoor guidance.
+     </p>
+
+     <p>
+      This AR-based navigation platform significantly improves traditional indoor wayfinding methods by eliminating the need for paper maps, signs, or verbal instructions.
+      It is particularly beneficial in large hospital environments where users may feel disoriented or stressed. By providing clear, visual, and interactive navigation, it enhances accessibility, reduces waiting times, and supports smarter healthcare operations.
+     </p>
+    </div>
+
+    <!-- ✅ 右侧图片内容 -->
+    <div class="intro-media">
+      <img src="assets/ar-demo.png" alt="AR Navigation Screenshot" />
+      <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
+        Figure: Real-time AR path navigation interface based on predicted location
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- ================= End Section 3 ================= -->
+
 <!-- ================= End wifi Section ================= -->
 
 
