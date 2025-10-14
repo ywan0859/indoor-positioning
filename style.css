@@ -170,7 +170,8 @@ a:hover{text-decoration:underline}
 
 .intro-media img,
 .intro-media video {
-  max-width: 100%;
+  max-width: 120%;
+  width:100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
