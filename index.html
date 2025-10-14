@@ -54,7 +54,7 @@
   </section>
 
 
-  <!-- Section 2：WiFi Fingerprint（左图右文） -->
+  <!-- Section 2：WiFi Fingerprinting Localization（左图右文） -->
 <section class="section" id="WiFi-Fingerprint">
   <div class="container flex">
    <!-- ✅ 左侧图片内容 -->
@@ -69,13 +69,14 @@
     <div class="text-block">
       <h2>WiFi Fingerprint</h2>
       <p>
-        Wi-Fi fingerprinting is a core technique for achieving indoor positioning using existing wireless network infrastructure.
-        It collects Wi-Fi signal strength (RSSI) features from different locations to build a “fingerprint database.”
-        When a user enters the environment, the system compares the current signal features with the stored fingerprints to accurately determine the user’s position.
+        WiFi Fingerprinting is a widely used indoor positioning method, especially suitable for GPS-denied environments like hospitals and shopping malls. 
+        It collects WiFi RSSI values at various locations to build a fingerprint database. 
+        The user's real-time signal is matched against the database to estimate their position.
       </p>
+      
       <p>
-        In this project, we integrate deep learning algorithms (CNN – Convolutional Neural Networks) to extract spatial features and recognize signal patterns from Wi-Fi data, significantly improving positioning accuracy and robustness. 
-        Combined with real-time data updates and API communication, the system achieves sub-meter-level accuracy, providing a reliable spatial foundation for the AR navigation platform.         
+       In this project, a Convolutional Neural Network (CNN) is applied to extract spatial features from RSSI data, achieving higher accuracy and robustness compared to traditional KNN methods. 
+       The predicted location is sent via API to a Unity-based AR navigation system, enabling real-time path visualization and guidance.       
       </p>
     </div>
     </div>
@@ -86,7 +87,7 @@
   </main>
 
   <footer class="footer container">
-    © <span id="year"></span> Indoor Positioning Platform · Built for Sydney IoT demos.
+    © <span id="year"></span> The University of Sydney. All rights reserved.  Design: YIHAN WANG. 
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
