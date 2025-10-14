@@ -179,7 +179,7 @@ a:hover{text-decoration:underline}
 .footer {
   padding: 20px 0;
   color: #000000;          /* 改为黑色文字 */
-  font-size: 12px;         /* 字体更小 */
+  font-size: 10px;         /* 字体更小 */
   text-align: center;      /* 居中对齐 */
 }
 
