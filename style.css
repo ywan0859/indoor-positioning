@@ -183,6 +183,18 @@ a:hover{text-decoration:underline}
   text-align: center;      /* 居中对齐 */
 }
 
+#framework {
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#framework img {
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
 
 
