@@ -52,6 +52,46 @@
     </div>
    </div>
   </section>
+    
+<!-- ================= Section 1.5: System Framework Overview ================= -->
+<section id="framework" class="intro-section" style="background:#f9fafb;">
+  <div class="intro-container">
+    <!-- 左侧图示 -->
+    <div class="intro-media">
+      <img src="assets/framework-diagram.png" alt="Wi-Fi Indoor Positioning Framework" />
+      <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
+        Figure: System architecture integrating Wi-Fi sensing, Django RESTful API, and Unity AR navigation.
+      </p>
+    </div>
+
+    <!-- 右侧说明 -->
+    <div class="intro-text">
+      <h2>System Framework Overview</h2>
+      <p>
+        The <b>Wi-Fi Indoor Positioning Framework</b> connects three main layers: data acquisition, AI processing, and AR visualization. 
+        The system captures Wi-Fi RSSI signals, processes them through a Django-based RESTful API integrated with 
+        <b>CNN</b> and <b>GNN</b> deep learning models, and outputs real-time coordinates to a Unity AR navigation app.
+      </p>
+
+      <p>
+        The Django backend provides endpoints such as:
+      </p>
+      <ul style="line-height:1.7em;">
+        <li><code>/wifidata/import</code> – Upload fingerprint datasets.</li>
+        <li><code>/wifidata/export</code> – Export trained data.</li>
+        <li><code>/wifidata/fingerprinting</code> – Fingerprint-based prediction.</li>
+        <li><code>/wifidata/cnnpredict</code> – CNN-based localization.</li>
+        <li><code>/wifidata/gnnpredict</code> – GNN-based localization.</li>
+      </ul>
+
+      <p>
+        This architecture ensures seamless communication between IoT data collection, AI model inference, and real-time AR navigation,
+        achieving high accuracy and system scalability for complex indoor environments.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ================= End Section 1.5 ================= -->
 
 
   <!-- Section 2：WiFi Fingerprinting Localization（左图右文） -->
