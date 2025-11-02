@@ -183,36 +183,5 @@ a:hover{text-decoration:underline}
   text-align: center;      /* 居中对齐 */
 }
 
-#framework {
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-#framework img {
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* ===== 修正 System Framework Overview 样式 ===== */
-
-/* 去除段落中 <b> / <strong> 的加粗效果 */
-#framework b,
-#framework strong {
-  font-weight: 400;  /* 改为普通字体 */
-  color: inherit;    /* 保持与正文相同颜色 */
-}
-
-/* 让 <code> 内文字大小与正文一致 */
-#framework code {
-  font-size: 16px;          /* 与正文匹配 */
-  font-family: inherit;     /* 使用相同字体 */
-  background: none;         /* 去掉灰底 */
-  color: inherit;           /* 保持同色 */
-  padding: 0;               /* 去掉内边距 */
-  border-radius: 0;         /* 去掉圆角 */
-}
 
 
