@@ -255,3 +255,17 @@ a:hover{text-decoration:underline}
   width: 100%;
   height: auto;
 }
+#System-Framework .intro-container,
+#model-performance .intro-container {
+  align-items: flex-start;
+  gap: 40px;
+}
+
+#System-Framework .intro-media img,
+#model-performance canvas {
+  max-width: 90%;
+  width: 550px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
