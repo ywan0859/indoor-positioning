@@ -183,5 +183,18 @@ a:hover{text-decoration:underline}
   text-align: center;      /* 居中对齐 */
 }
 
+/* System Framework 图片大小与位置调整 */
+#System-Framework .intro-media img {
+  max-width: 90%;       /* 控制图片宽度（比100%略小） */
+  width: 550px;         /* 固定最大显示宽度 */
+  height: auto;         /* 保持比例 */
+  display: block;
+  margin: 0;            /* 去掉自动居中 */
+}
+
+#System-Framework .intro-container {
+  align-items: flex-start;   /* 顶部对齐，避免中间偏移 */
+  gap: 40px;                 /* 图文间距 */
+}
 
 
