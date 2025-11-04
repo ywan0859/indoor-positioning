@@ -148,44 +148,6 @@
 <!-- ================= End Section 2 ================= -->
 
 
-    
-    <!-- ================= Section 3: AI Model Pipeline & Training Visualization ================= -->
-<section class="intro-section" id="ai-pipeline">
-  <div class="intro-container">
-    
-    <!-- 左侧：AI 模型流程图 -->
-    <div class="intro-media">
-      <img src="assets/ai-pipeline.png" alt="CNN/GNN Model Pipeline" />
-      <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
-        Figure: The CNN-based localization model trained with Wi-Fi RSSI fingerprint data.
-      </p>
-    </div>
-
-    <!-- 右侧：模型训练说明与 Loss 曲线 -->
-    <div class="intro-text">
-      <h2>AI Model Pipeline & Training Visualization</h2>
-      <p>
-        The deep learning module is implemented using <b>PyTorch Lightning</b>, providing a structured and scalable 
-        framework for Wi-Fi fingerprint regression tasks. The <b>CNN model</b> extracts spatial correlations 
-        among RSSI features, while the <b>GNN model</b> further leverages graph connectivity between Access Points.
-      </p>
-
-      <p>
-        During training, the model minimizes the <i>Mean Squared Error (MSE)</i> between predicted and true coordinates 
-        (<code>x</code>, <code>y</code>), converging rapidly within the first 50 epochs.
-      </p>
-
-      <!-- Loss曲线图 -->
-      <canvas id="lossChart" width="500" height="350"></canvas>
-      <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
-        Figure: Training loss decreases steadily, indicating good convergence and model generalization.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- ================= End Section 3 ================= -->
-
-
   <!-- Section 2：WiFi Fingerprinting Localization（左图右文） -->
 <section class="intro-section" id="WiFi-Fingerprint">
   <div class="intro-container">
