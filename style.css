@@ -197,4 +197,14 @@ a:hover{text-decoration:underline}
   gap: 40px;                 /* 图文间距 */
 }
 
+/* 统一 /wifidata/ 这类 <code> 文本的样式 */
+#System-Framework code {
+  font-family: inherit;     /* 使用与正文相同的字体 */
+  font-size: 16px;          /* 与正文一致 */
+  color: #444;              /* 与正文颜色一致 */
+  background: none;         /* 移除灰底 */
+  padding: 0;               /* 移除内边距 */
+  border: none;             /* 移除边框 */
+  font-weight: 400;         /* 普通粗细 */
+}
 
