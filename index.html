@@ -93,7 +93,63 @@
   </div>
 </section>
 <!-- ================= End Section 1.5 ================= -->
+<!-- ================= Section 2: Model Performance Comparison ================= -->
+<section class="intro-section" id="model-performance">
+  <div class="intro-container">
+    <div class="intro-text">
+      <h2>Model Performance Comparison</h2>
+      <p>
+        To evaluate positioning accuracy, multiple algorithms including <b>KNN</b>, 
+        <b>Random Forest (RF)</b>, <b>CNN</b>, and <b>GNN</b> were compared on the same Wi-Fi fingerprint dataset. 
+        Deep learning models such as CNN and GNN achieve significantly lower average localization errors, 
+        demonstrating the advantage of spatial feature extraction and topology awareness.
+      </p>
 
+      <table class="perf-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Average Error (m)</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>KNN</td>
+            <td>2.30</td>
+            <td>Baseline distance-based approach</td>
+          </tr>
+          <tr>
+            <td>Random Forest</td>
+            <td>1.90</td>
+            <td>Enhanced fingerprinting using ensemble trees</td>
+          </tr>
+          <tr>
+            <td>CNN</td>
+            <td><b>1.78</b></td>
+            <td>Deep spatial feature extraction</td>
+          </tr>
+          <tr>
+            <td>GNN</td>
+            <td><b>1.70</b></td>
+            <td>Graph-based spatial relation learning</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intro-media">
+      <canvas id="perfChart" width="500" height="350"></canvas>
+      <p style="text-align:center;font-size:14px;color:#777;margin-top:10px">
+        Figure: Model performance comparison showing CNN and GNN achieving the lowest errors.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ================= End Section 2 ================= -->
+
+
+    
     <!-- ================= Section 3: AI Model Pipeline & Training Visualization ================= -->
 <section class="intro-section" id="ai-pipeline">
   <div class="intro-container">
@@ -202,13 +258,52 @@
 
 <!-- ================= End wifi Section ================= -->
 
-
   </main>
 
-  <footer class="footer container">
+
+    <footer class="footer container">
     © <span id="year"></span> The University of Sydney. All rights reserved.  Design: YIHAN WANG. 
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <!-- 年份脚本 -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ==================== Chart.js 模块 ==================== -->
+  <!-- 1️⃣ 引入 Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- 2️⃣ 创建 Model Performance 图表 -->
+  <script>
+    const ctx = document.getElementById('perfChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['KNN', 'Random Forest', 'CNN', 'GNN'],
+        datasets: [{
+          label: 'Average Error (m)',
+          data: [2.3, 1.9, 1.78, 1.7],
+          borderWidth: 2,
+          borderColor: '#22d3ee',
+          pointBackgroundColor: '#22d3ee',
+          fill: false,
+          tension: 0.3
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: { display: true, text: 'Error (m)' }
+          },
+          x: {
+            title: { display: true, text: 'Model' }
+          }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+  </script>
 </body>
- 
 </html>
